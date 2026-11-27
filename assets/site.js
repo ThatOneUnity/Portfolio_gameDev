@@ -16,7 +16,8 @@
       if (motion.matches || !desktopPointer.matches || event.pointerType !== 'mouse') return;
 
       const position = Math.max(0, Math.min(event.clientX / window.innerWidth, 1));
-      const offset = (position - 0.5) * 16;
+      const range = Math.min(18, window.innerWidth * 0.018);
+      const offset = (2 * position - 1) * range;
       art.style.setProperty('--hero-pan-x', `${offset}px`);
     });
 
@@ -48,6 +49,37 @@
   window.addEventListener('load', scheduleDraw);
   motion.addEventListener('change', scheduleDraw);
   scheduleDraw();
+
+  const preview = document.querySelector('.image-preview');
+
+  if (preview && typeof preview.showModal === 'function') {
+    const picture = preview.querySelector('img');
+    let opener;
+
+    for (const link of document.querySelectorAll('[data-image-preview]')) {
+      link.setAttribute('aria-haspopup', 'dialog');
+      link.addEventListener('click', (event) => {
+        if (event.defaultPrevented || event.button !== 0 ||
+            event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+        event.preventDefault();
+        const thumbnail = link.closest('.vrchat-card').querySelector('.vrchat-card__media img');
+        picture.alt = thumbnail.alt;
+        picture.src = link.href;
+        opener = link;
+        preview.showModal();
+      });
+    }
+
+    preview.querySelector('button').addEventListener('click', () => preview.close());
+    preview.addEventListener('click', (event) => {
+      if (event.target === preview) preview.close();
+    });
+    preview.addEventListener('close', () => {
+      opener?.focus({ preventScroll: true });
+      opener = undefined;
+    });
+  }
 
   if (!motion.matches && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {

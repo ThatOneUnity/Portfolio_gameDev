@@ -67,6 +67,8 @@
     "vrchatGraphTitle": "Button-Controlled Fog",
     "vrchatGraphBody": "When the player presses the button, the graph changes the fog color and sets a new target density. The fog then gradually transitions to that density.",
     "vrchatGraphOpen": "Open full-size graph",
+    "imagePreview": "Image preview",
+    "closeImagePreview": "Close image preview",
     "vrchatWorldAlt": "VRChat world interior with a fireplace and warm lighting, shown in the Unity Editor",
     "vrchatWorldStatus": "Published world",
     "vrchatWorldTitle": "Watch Party Room",
