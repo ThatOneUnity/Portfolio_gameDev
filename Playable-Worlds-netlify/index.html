@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111110">
+  <meta name="description" content="Портфолио геймплейного программиста. Механики Wild Egypt на Unity 6 и C#, опубликованный мир VRChat и визуальный скрипт в Udon Graph." data-i18n-content="homeMeta">
+  <title data-i18n="homeTitle">Playable Worlds | Геймплейный программист</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="assets/site.css">
+  <script defer src="assets/language.js"></script>
+  <script defer src="assets/site.js"></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main" data-i18n="skipLink">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="wordmark" href="index.html" data-language-link aria-label="Главная страница Playable Worlds" data-i18n-label="brandLabel">PORTFOLIO</a>
+      <nav class="navigation" aria-label="Основная навигация" data-i18n-label="navLabel">
+        <a href="#project" data-i18n="navProject">Проект</a>
+        <a href="about.html" data-language-link data-i18n="navAbout">Обо мне</a>
+        <a class="nav-contact" href="#contact" data-i18n="navContact">Контакты</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Язык сайта" data-i18n-label="languageLabel" hidden>
+        <button type="button" data-language="ru" lang="ru" aria-label="Русский" aria-pressed="true">RU</button>
+        <button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__art" aria-hidden="true">
+        <img src="assets/voxel-lagoon.jpg" width="1672" height="941" alt="" fetchpriority="high">
+      </div>
+      <div class="container hero__content">
+        <h1 id="hero-title"><span data-i18n="heroGameplay">Gameplay</span><span data-i18n="heroProgrammer">программист</span></h1>
+        <p data-i18n="heroBio">Разрабатываю игровые механики на Unity 6 и C#.</p>
+        <a class="button button--primary" href="#project" data-i18n="viewProject">Смотреть проект</a>
+      </div>
+      <small class="hero__caption" data-i18n="artLabel">Концепт-арт</small>
+    </section>
+
+    <div class="container page-sections">
+      <section class="section" id="project" aria-labelledby="project-title">
+        <div class="project-heading" data-reveal>
+          <div class="project-heading__title">
+            <h2 id="project-title">Wild Egypt</h2>
+            <span class="project-status" data-i18n="projectStatus">В разработке</span>
+          </div>
+          <p data-i18n="projectGenre">Дипломный проект · Воксельный шутер от первого лица</p>
+        </div>
+        <div class="project-grid" data-reveal>
+          <figure class="capture" id="project-capture">
+            <!-- Replace this placeholder with a game capture when available. -->
+            <div class="capture__placeholder">
+              <span class="capture__icon" aria-hidden="true"></span>
+              <span data-i18n="projectCapture">Кадр из игры</span>
+            </div>
+          </figure>
+          <div>
+            <h3 class="contribution-title" data-i18n="contributionTitle">Мои реализации</h3>
+            <dl class="contribution-grid">
+              <div><dt data-i18n="shooting">Стрельба и перезарядка</dt><dd data-i18n="shootingDescription">Стрельба, переключение режимов огня и логика анимации перезарядки.</dd></div>
+              <div><dt data-i18n="waves">Волны врагов</dt><dd data-i18n="wavesDescription">Разные волны — разные враги.</dd></div>
+              <div><dt data-i18n="behavior">Поведение врагов</dt><dd data-i18n="behaviorDescription">Логика поведения врагов, когда они теряют игрока из виду.</dd></div>
+              <div><dt data-i18n="environment">Взаимодействие с окружением</dt><dd data-i18n="environmentDescription">Бочки с бензином взрываются один раз, а в воде движение замедляется.</dd></div>
+              <div><dt data-i18n="shop">Внутриигровой магазин</dt><dd data-i18n="shopDescription">Реализовал покупку игровых предметов с помощью менеджеров.</dd></div>
+              <div><dt data-i18n="ui">Игровой интерфейс</dt><dd data-i18n="uiDescription">Понятный интерфейс, который не мешает игре.</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="mechanics" aria-labelledby="mechanics-title">
+        <h2 id="mechanics-title" data-reveal data-i18n="mechanicsTitle">Механики крупным планом</h2>
+        <div class="mechanics-grid">
+          <article class="mechanic" data-reveal>
+            <figure class="capture" id="weapon-capture">
+              <div class="capture__placeholder">
+                <span class="capture__icon" aria-hidden="true"></span>
+                <span data-i18n="weaponsCapture">Кадр с управлением оружием</span>
+              </div>
+            </figure>
+            <h3 data-i18n="weaponsTitle">Управление оружием</h3>
+            <p data-i18n="weaponsBody">Режим огня можно переключать во время игры. У перезарядки своя логика анимации.</p>
+          </article>
+          <article class="mechanic" data-reveal>
+            <figure class="capture" id="level-capture">
+              <div class="capture__placeholder">
+                <span class="capture__icon" aria-hidden="true"></span>
+                <span data-i18n="levelCapture">Кадр взаимодействия с окружением</span>
+              </div>
+            </figure>
+            <h3 data-i18n="levelTitle">Взаимодействие с уровнем</h3>
+            <p data-i18n="levelBody">Мелкая вода замедляет движение, а бочки можно взорвать.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section" id="enemies" aria-labelledby="enemies-title">
+        <div class="split-section__text" data-reveal>
+          <h2 id="enemies-title" data-i18n="enemiesTitle">Системы противников</h2>
+          <dl class="feature-list">
+            <div><dt data-i18n="wavesTitle">Волны противников</dt><dd data-i18n="waveDetail">В разных волнах появляются разные враги.</dd></div>
+            <div><dt data-i18n="behavior">Поведение врагов</dt><dd data-i18n="behaviorDetail">Я реализовал логику поведения противников, в том числе когда они теряют игрока из виду.</dd></div>
+          </dl>
+        </div>
+        <figure class="capture" id="enemy-capture" data-reveal>
+          <div class="capture__placeholder">
+            <span class="capture__icon" aria-hidden="true"></span>
+            <span data-i18n="enemiesCapture">Кадр с волнами врагов</span>
+          </div>
+        </figure>
+      </section>
+
+      <section class="section split-section split-section--reverse" id="shop" aria-labelledby="shop-title">
+        <div class="split-section__text" data-reveal>
+          <h2 id="shop-title" data-i18n="shopTitle">Магазин и интерфейс</h2>
+          <dl class="feature-list">
+            <div><dt data-i18n="shop">Внутриигровой магазин</dt><dd data-i18n="shopDetail">В магазине можно покупать игровые предметы. За логику покупки отвечают менеджеры.</dd></div>
+            <div><dt data-i18n="ui">Игровой интерфейс</dt><dd data-i18n="uiDetail">Я реализовал интерфейс, которым игрок пользуется во время игры.</dd></div>
+          </dl>
+        </div>
+        <figure class="capture" id="shop-capture" data-reveal>
+          <div class="capture__placeholder">
+            <span class="capture__icon" aria-hidden="true"></span>
+            <span data-i18n="shopCapture">Кадр магазина и интерфейса</span>
+          </div>
+        </figure>
+      </section>
+
+      <section class="section vrchat" id="vrchat" aria-labelledby="vrchat-title">
+        <h2 id="vrchat-title" data-i18n="vrchatTitle" data-reveal>Работы для VRChat</h2>
+        <div class="vrchat-grid">
+          <article class="vrchat-card" data-reveal>
+            <figure class="vrchat-card__media vrchat-card__media--graph">
+              <img src="assets/vrchat-udon-graph.png" width="1183" height="708" loading="lazy" alt="Скриншот Udon Graph с обработчиком Interact и логикой изменения тумана" data-i18n-alt="vrchatGraphAlt">
+            </figure>
+            <p class="vrchat-card__tag">Udon Graph</p>
+            <h3 data-i18n="vrchatGraphTitle">Переключение тумана кнопкой</h3>
+            <p data-i18n="vrchatGraphBody">Когда игрок нажимает кнопку, граф меняет цвет тумана и задаёт новую плотность. Плотность плавно меняется до заданного значения.</p>
+            <a class="text-link" href="assets/vrchat-udon-graph.png" data-i18n="vrchatGraphOpen">Открыть граф в полном размере</a>
+          </article>
+          <article class="vrchat-card" data-reveal>
+            <figure class="vrchat-card__media">
+              <img src="assets/vrchat-world.png" width="993" height="521" loading="lazy" alt="Интерьер мира VRChat с камином и тёплой подсветкой, вид из редактора Unity" data-i18n-alt="vrchatWorldAlt">
+            </figure>
+            <p class="vrchat-card__tag" data-i18n="vrchatWorldStatus">Опубликованный мир</p>
+            <h3 data-i18n="vrchatWorldTitle">Комната для совместных просмотров</h3>
+            <p data-i18n="vrchatWorldBody">Я создал и опубликовал уютный мир в VRChat, куда могут зайти другие игроки, чтобы пообщаться и посмотреть что-нибудь вместе на большом экране. На кадре из редактора экран остался за камерой.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section about-teaser" aria-labelledby="about-title">
+        <h2 id="about-title" data-reveal data-i18n="aboutTeaserTitle">Обо мне</h2>
+        <div class="about-teaser__copy" data-reveal>
+          <p data-i18n="aboutTeaser">Ищу позицию геймплейного программиста в команде. В своём проекте я работаю над боевыми механиками, поведением врагов и взаимодействием с уровнем.</p>
+          <a class="text-link" href="about.html" data-language-link data-i18n="readBio">Читать биографию</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer container" id="contact">
+    <p class="site-footer__line" data-i18n="footerLine">Я люблю делать игры</p>
+    <div class="site-footer__contact">
+      <span>Telegram</span>
+      <a class="button button--outline" href="https://t.me/ThatOneGuyDude">@ThatOneGuyDude</a>
+    </div>
+  </footer>
+</body>
+</html>
