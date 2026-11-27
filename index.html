@@ -7,9 +7,9 @@
   <meta name="description" content="Портфолио геймплейного программиста. Механики Wild Egypt на Unity 6 и C#, опубликованный мир VRChat и визуальный скрипт в Udon Graph." data-i18n-content="homeMeta">
   <title data-i18n="homeTitle">Playable Worlds | Геймплейный программист</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="assets/site.css">
-  <script defer src="assets/language.js"></script>
-  <script defer src="assets/site.js"></script>
+  <link rel="stylesheet" href="assets/site.css?v=2">
+  <script defer src="assets/language.js?v=2"></script>
+  <script defer src="assets/site.js?v=2"></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main" data-i18n="skipLink">Перейти к содержимому</a>
@@ -135,18 +135,18 @@
         <h2 id="vrchat-title" data-i18n="vrchatTitle" data-reveal>Работы для VRChat</h2>
         <div class="vrchat-grid">
           <article class="vrchat-card" data-reveal>
-            <figure class="vrchat-card__media vrchat-card__media--graph">
+            <a class="vrchat-card__media vrchat-card__media--graph" href="assets/vrchat-udon-graph.png" data-image-preview>
               <img src="assets/vrchat-udon-graph.png" width="1183" height="708" loading="lazy" alt="Скриншот Udon Graph с обработчиком Interact и логикой изменения тумана" data-i18n-alt="vrchatGraphAlt">
-            </figure>
+            </a>
             <p class="vrchat-card__tag">Udon Graph</p>
             <h3 data-i18n="vrchatGraphTitle">Переключение тумана кнопкой</h3>
             <p data-i18n="vrchatGraphBody">Когда игрок нажимает кнопку, граф меняет цвет тумана и задаёт новую плотность. Плотность плавно меняется до заданного значения.</p>
-            <a class="text-link" href="assets/vrchat-udon-graph.png" data-i18n="vrchatGraphOpen">Открыть граф в полном размере</a>
+            <a class="text-link" href="assets/vrchat-udon-graph.png" data-image-preview data-i18n="vrchatGraphOpen">Открыть граф в полном размере</a>
           </article>
           <article class="vrchat-card" data-reveal>
-            <figure class="vrchat-card__media">
+            <a class="vrchat-card__media" href="assets/vrchat-world.png" data-image-preview>
               <img src="assets/vrchat-world.png" width="993" height="521" loading="lazy" alt="Интерьер мира VRChat с камином и тёплой подсветкой, вид из редактора Unity" data-i18n-alt="vrchatWorldAlt">
-            </figure>
+            </a>
             <p class="vrchat-card__tag" data-i18n="vrchatWorldStatus">Опубликованный мир</p>
             <h3 data-i18n="vrchatWorldTitle">Комната для совместных просмотров</h3>
             <p data-i18n="vrchatWorldBody">Я создал и опубликовал уютный мир в VRChat, куда могут зайти другие игроки, чтобы пообщаться и посмотреть что-нибудь вместе на большом экране. На кадре из редактора экран остался за камерой.</p>
@@ -171,5 +171,10 @@
       <a class="button button--outline" href="https://t.me/ThatOneGuyDude">@ThatOneGuyDude</a>
     </div>
   </footer>
+
+  <dialog class="image-preview" aria-label="Просмотр изображения" data-i18n-label="imagePreview">
+    <button class="image-preview__close" type="button" aria-label="Закрыть просмотр" data-i18n-label="closeImagePreview" autofocus>×</button>
+    <img src="assets/vrchat-udon-graph.png" alt="" loading="lazy">
+  </dialog>
 </body>
 </html>
